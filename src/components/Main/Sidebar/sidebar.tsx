@@ -32,7 +32,7 @@ const data: Data[] = [
 export const Sidebar = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const listStyle =
-    "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100 flex";
+    "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100 flex cursor-pointer";
 
   return (
     <aside className="flex flex-col items-start  bg-red-100 transition-all">
@@ -69,7 +69,7 @@ export const Sidebar = () => {
         <hr className="w-4/5 " />
         <div className="mb-4 flex flex-col items-start ">
           <div className={listStyle}>
-            <IconSwitchHorizontal />
+            <IconSwitchHorizontal className="cursor-pointer" />
             {opened ? null : "Change account"}
           </div>
           <div className={listStyle}>
