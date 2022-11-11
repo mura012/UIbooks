@@ -1,11 +1,11 @@
 import React from "react";
-import { Aside } from "./Aside";
+import { Sidebar } from "./Sidebar";
 import { MainContent } from "./MainContent";
 
 export const Main = () => {
   return (
     <div className="flex h-screen">
-      <Aside />
+      <Sidebar />
       <MainContent />
     </div>
   );
