@@ -68,14 +68,18 @@ export const Sidebar = () => {
         </div>
         <hr className="w-4/5 " />
         <div className="mb-4 flex flex-col items-start ">
-          <div className={listStyle}>
-            <IconSwitchHorizontal className="cursor-pointer" />
-            {opened ? null : "Change account"}
-          </div>
-          <div className={listStyle}>
-            <IconLogout />
-            {opened ? null : "Login"}
-          </div>
+          <li>
+            <Link href="/" className={listStyle}>
+              <IconSwitchHorizontal className="cursor-pointer" />
+              {opened ? null : "Change account"}
+            </Link>
+          </li>
+          <li>
+            <Link href="/login" className={listStyle}>
+              <IconLogout />
+              {opened ? null : "Login"}
+            </Link>
+          </li>
         </div>
       </ul>
     </aside>
