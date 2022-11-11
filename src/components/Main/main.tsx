@@ -4,7 +4,7 @@ import { MainContent } from "./MainContent";
 
 export const Main = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-[88vh]">
       <Sidebar />
       <MainContent />
     </div>
