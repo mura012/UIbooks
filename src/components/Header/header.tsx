@@ -2,7 +2,7 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <div className="flex h-12 items-center justify-around bg-pink-500 text-3xl">
+    <header className="flex h-12 items-center justify-around bg-pink-500 text-3xl">
       <div>header</div>
       <nav>
         <ul className="flex space-x-2">
@@ -12,6 +12,6 @@ export const Header = () => {
           <li>test</li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
