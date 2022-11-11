@@ -1,28 +1,38 @@
 import Link from "next/link";
 import React from "react";
+import {
+  IconPencil,
+  IconBook,
+  IconPaperBag,
+  IconPaperclip,
+} from "@tabler/icons";
 
 type Data = {
   link: string;
   label: string;
+  icon: any;
 };
 
 const data: Data[] = [
-  { link: "", label: "blog" },
-  { link: "", label: "book" },
-  { link: "", label: "portfolio" },
-  { link: "", label: "test" },
+  { link: "", label: "blog", icon: <IconBook /> },
+  { link: "", label: "book", icon: <IconPencil /> },
+  { link: "", label: "portfolio", icon: <IconPaperBag /> },
+  { link: "", label: "test", icon: <IconPaperclip /> },
 ];
 
 export const Header = () => {
   return (
     <header className="flex h-12 items-center justify-around bg-pink-500 text-2xl">
-      <div>uibooks</div>
+      <div>UIbooks</div>
       <nav>
         <ul className="flex space-x-2">
           {data.map((item) => {
             return (
               <li key={item.label}>
-                <Link href={item.link}>{item.label}</Link>
+                <Link href={item.link}>
+                  {item.icon}
+                  {item.label}
+                </Link>
               </li>
             );
           })}

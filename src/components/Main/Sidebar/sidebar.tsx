@@ -11,7 +11,7 @@ import {
   IconLogout,
 } from "@tabler/icons";
 import Link from "next/link";
-import { CloseButton, Drawer } from "@mantine/core";
+import { CloseButton } from "@mantine/core";
 
 type Data = {
   link: string;
@@ -33,7 +33,6 @@ export const Sidebar = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const listStyle =
     "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100 flex";
-  console.log(opened);
 
   return (
     <aside className="flex flex-col items-start  bg-red-100 transition-all">
@@ -67,6 +66,7 @@ export const Sidebar = () => {
                 );
               })}
         </div>
+        <hr className="w-4/5 " />
         <div className="mb-4 flex flex-col items-start ">
           <div className={listStyle}>
             <IconSwitchHorizontal />
