@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IconBellRinging,
   IconFingerprint,
@@ -11,6 +11,7 @@ import {
   IconLogout,
 } from "@tabler/icons";
 import Link from "next/link";
+import { CloseButton, Drawer } from "@mantine/core";
 
 type Data = {
   link: string;
@@ -29,35 +30,54 @@ const data: Data[] = [
 ];
 
 export const Sidebar = () => {
+  const [opened, setOpened] = useState<boolean>(false);
   const listStyle =
-    "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100";
+    "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100 flex";
+  console.log(opened);
+
   return (
-    <aside className="flex basis-1/5 flex-col items-center justify-between bg-red-100">
-      <div>
-        <h1>uibooks</h1>
-        <ul className="space-y-4">
-          {data.map((item) => {
-            return (
-              <li key={item.label} className={listStyle}>
-                <Link href={item.link} className="flex">
-                  {item.icon}
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+    <aside className="flex flex-col items-start  bg-red-100 transition-all">
+      <div className="flex justify-start">
+        <CloseButton
+          size="xl"
+          className={listStyle}
+          onClick={() => setOpened(opened ? false : true)}
+        />
       </div>
-      <div className="mb-4 flex flex-col items-start space-y-4 ">
-        <div className={listStyle}>
-          <IconSwitchHorizontal />
-          Change account
+      <ul className="space-y-4">
+        <div>
+          {opened
+            ? data.map((item) => {
+                return (
+                  <li key={item.label} className={listStyle}>
+                    <Link href={item.link} className="flex">
+                      {item.icon}
+                    </Link>
+                  </li>
+                );
+              })
+            : data.map((item) => {
+                return (
+                  <li key={item.label} className={listStyle}>
+                    <Link href={item.link} className="flex">
+                      {item.icon}
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
         </div>
-        <div className={listStyle}>
-          <IconLogout />
-          Login
+        <div className="mb-4 flex flex-col items-start ">
+          <div className={listStyle}>
+            <IconSwitchHorizontal />
+            {opened ? null : "Change account"}
+          </div>
+          <div className={listStyle}>
+            <IconLogout />
+            {opened ? null : "Login"}
+          </div>
         </div>
-      </div>
+      </ul>
     </aside>
   );
 };
