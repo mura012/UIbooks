@@ -11,7 +11,7 @@ import {
   IconLogout,
 } from "@tabler/icons";
 import Link from "next/link";
-import { CloseButton } from "@mantine/core";
+import { Burger } from "@mantine/core";
 
 type Data = {
   link: string;
@@ -37,9 +37,10 @@ export const Sidebar = () => {
   return (
     <aside className="flex flex-col items-start  bg-red-100 transition-all">
       <div className="flex justify-start">
-        <CloseButton
-          size="xl"
-          className={listStyle}
+        <Burger
+          size="md"
+          opened={opened}
+          className="opacity-50"
           onClick={() => setOpened(opened ? false : true)}
         />
       </div>
