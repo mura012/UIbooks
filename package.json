@@ -29,6 +29,8 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
+    "@mantine/dates": "^5.7.1",
+    "dayjs": "^1.11.6",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13"
   }
