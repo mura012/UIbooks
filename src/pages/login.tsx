@@ -2,30 +2,42 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Center } from "src/Layouts/Center/center";
 import { IconEye, IconEyeOff } from "@tabler/icons";
+import { Button, Input } from "@mantine/core";
 
 const Login = () => {
   const [password, setPassword] = useState<boolean>(true);
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    setPassword(!password);
+  };
 
   return (
     <Center>
       <h1>実際にはログインできません</h1>
       <form>
-        <p>メールアドレス</p>
-        <input type="text" placeholder="sample@gmail.com" autoComplete="off" />
-        <p>パスワード</p>
-        <div className="flex">
-          <input type={password ? "password" : "text"} autoComplete="off" />
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              setPassword(!password);
-            }}
-            className="flex h-6 items-center"
-          >
-            {password ? <IconEye /> : <IconEyeOff />}
-          </button>
+        <div className="w-3/5 bg-gray-50 p-5 shadow-md">
+          <p>メールアドレス</p>
+          <Input type="text" autoComplete="off" />
+          <p className="mt-4">パスワード</p>
+          <div className="flex justify-between">
+            <Input
+              type={password ? "password" : "text"}
+              autoComplete="off"
+              radius="xs"
+              className="grow"
+            />
+            <Button
+              onClick={handleClick}
+              className="flex items-center"
+              variant="outline"
+              color="dark"
+              radius="xs"
+            >
+              {password ? <IconEye /> : <IconEyeOff />}
+            </Button>
+          </div>
+          <Button style={{ marginTop: "20px" }}>ログイン</Button>
         </div>
-        <button>ログイン</button>
         <Link href="/">戻る</Link>
       </form>
     </Center>
