@@ -15,7 +15,7 @@ const Login = () => {
     <Center>
       <h1>実際にはログインできません</h1>
       <form>
-        <div className="w-3/5 bg-gray-50 p-5 shadow-md">
+        <div className="w-80 bg-gray-50 p-5 shadow-md">
           <p>メールアドレス</p>
           <Input type="text" autoComplete="off" />
           <p className="mt-4">パスワード</p>
