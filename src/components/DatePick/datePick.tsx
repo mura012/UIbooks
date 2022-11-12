@@ -3,7 +3,7 @@ import { Center } from "src/Layouts/Center";
 import { DatePicker } from "@mantine/dates";
 
 export const DatePick = () => {
-  const [value, onChange] = useState<any>(new Date());
+  const [value, onChange] = useState<any>("");
   const [date, setDate] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
