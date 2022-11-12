@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const Login = () => {
   const [password, setPassword] = useState<boolean>(true);
-  const handleClick = (e: any) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
     e.preventDefault();
     setPassword(!password);
   };

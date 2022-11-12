@@ -9,14 +9,16 @@ import {
   IconReceipt2,
   IconSwitchHorizontal,
   IconLogout,
+  TablerIcon,
 } from "@tabler/icons";
 import Link from "next/link";
 import { Burger } from "@mantine/core";
+import { ReactElement } from "react";
 
 type Data = {
   link: string;
   label: string;
-  icon: any;
+  icon: ReactElement<TablerIcon>;
 };
 
 const data: Data[] = [

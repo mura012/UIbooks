@@ -1,16 +1,17 @@
 import Link from "next/link";
-import React from "react";
+import React, { ReactElement } from "react";
 import {
   IconPencil,
   IconBook,
   IconPaperBag,
   IconPaperclip,
+  TablerIcon,
 } from "@tabler/icons";
 
 type Data = {
   link: string;
   label: string;
-  icon: any;
+  icon: ReactElement<TablerIcon>;
 };
 
 const data: Data[] = [
