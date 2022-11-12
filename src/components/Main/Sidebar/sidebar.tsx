@@ -41,31 +41,22 @@ export const Sidebar = () => {
           size="md"
           opened={opened}
           className="opacity-50"
-          onClick={() => setOpened(opened ? false : true)}
+          onClick={() => setOpened(!opened)}
         />
       </div>
       <ul className="space-y-4">
         <div>
-          {opened
-            ? data.map((item) => {
-                return (
-                  <li key={item.label} className={listStyle}>
-                    <Link href={item.link} className="flex">
-                      {item.icon}
-                    </Link>
-                  </li>
-                );
-              })
-            : data.map((item) => {
-                return (
-                  <li key={item.label} className={listStyle}>
-                    <Link href={item.link} className="flex">
-                      {item.icon}
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              })}
+          {data.map((item) => {
+            return (
+              <li key={item.label} className={listStyle}>
+                <Link href={item.link} className="flex">
+                  {item.icon}
+                  {opened ? null : item.label}
+                  {/* {!opened && item.label} */}
+                </Link>
+              </li>
+            );
+          })}
         </div>
         <hr className="w-4/5 " />
         <div className="mb-4 flex flex-col items-start ">
