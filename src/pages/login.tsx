@@ -13,19 +13,22 @@ const emailValidate = new RegExp(
 const Login = () => {
   const ref = useRef<HTMLInputElement>(null);
   const [password, setPassword] = useState<boolean>(true);
-  const [emailError, setEmailError] = useState<boolean>(false);
+  const [errorText, setErrorText] = useState<string>("");
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
     e.preventDefault();
     setPassword(!password);
   };
-  const handleLogin = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+  const handleLogin = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     e.preventDefault();
-    if (!ref.current?.value) return;
+    if (!ref.current?.value) {
+      setErrorText("※メールアドレスを入力してください");
+      return;
+    }
     if (emailValidate.test(ref.current?.value)) {
-      setEmailError(false);
+      setErrorText("");
     } else {
-      setEmailError(true);
+      setErrorText("※メールアドレスが正しくありません");
     }
   };
 
@@ -37,10 +40,13 @@ const Login = () => {
       <Center>
         <form className="w-80 bg-gray-50 p-5 shadow-md">
           <p>メールアドレス</p>
-          <Input type="email" autoComplete="off" ref={ref} />
-          <p className="text-red-500">
-            {emailError ? "※メールアドレスが間違っています" : ""}
-          </p>
+          <Input
+            type="email"
+            autoComplete="off"
+            ref={ref}
+            placeholder="sample@gmail.com"
+          />
+          <p className="text-red-500">{errorText}</p>
           <p className="mt-4">パスワード</p>
           <div className="flex justify-between">
             <Input
