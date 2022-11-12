@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Center } from "src/Layouts/Center/center";
+import { Center } from "src/Layouts/Center";
 import { DatePicker } from "@mantine/dates";
 
 export const DatePick = () => {

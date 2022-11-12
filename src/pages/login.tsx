@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { Center } from "src/Layouts/Center/center";
+import { Center } from "src/Layouts/Center";
 import { IconEye, IconEyeOff } from "@tabler/icons";
 import { Button, Input } from "@mantine/core";
 import Head from "next/head";
