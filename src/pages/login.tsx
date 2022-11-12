@@ -33,7 +33,7 @@ const Login = () => {
               />
               <Button
                 onClick={handleClick}
-                className="flex items-center"
+                className="flex items-center border-0"
                 variant="outline"
                 color="dark"
                 radius="xs"
