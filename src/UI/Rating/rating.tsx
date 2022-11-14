@@ -8,6 +8,7 @@ export const Rating = () => {
   const [check3, setCheck3] = useState<boolean>(false);
   const [check4, setCheck4] = useState<boolean>(false);
   const [check5, setCheck5] = useState<boolean>(false);
+
   const star = [
     { num: 1, check: check1, change: setCheck1 },
     { num: 2, check: check2, change: setCheck2 },
@@ -34,15 +35,17 @@ export const Rating = () => {
   const handleClear = (e: clickEvent) => {
     middleware(e);
   };
+  const result = star.filter((item) => item.check === true);
+
   return (
-    <div className="m-4 w-1/5 min-w-fit border-2 border-solid bg-white p-3">
+    <div className="m-4 w-1/6 min-w-fit border-2 border-solid bg-white p-3">
       <ul className="m-2 flex">
         {star.map((item) => {
           return (
             <li key={item.num}>
               <button
                 onClick={(e: clickEvent) => handleClick(e, item.num)}
-                className="border-0 bg-white text-xl text-yellow-400"
+                className="cursor-pointer border-0 bg-white text-xl text-yellow-400 "
               >
                 {item.check ? "★" : "☆"}
               </button>
@@ -50,14 +53,17 @@ export const Rating = () => {
           );
         })}
       </ul>
-      <Button
-        onClick={(e: clickEvent) => {
-          handleClear(e);
-        }}
-        className="m-2"
-      >
-        クリア
-      </Button>
+      <div className="flex items-center">
+        <Button
+          onClick={(e: clickEvent) => {
+            handleClear(e);
+          }}
+          className="m-2"
+        >
+          クリア
+        </Button>
+        <p>評価：{result.length}/5</p>
+      </div>
     </div>
   );
 };
