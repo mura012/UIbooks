@@ -1,6 +1,5 @@
 import React from "react";
-
-import { HamburgerMenu } from "src/UI/HamburgerMenu";
+import { HamburgerMenu } from "src/UI/Hamburger";
 
 export const Sidebar = () => {
   return (
