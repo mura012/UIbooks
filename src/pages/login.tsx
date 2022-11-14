@@ -5,6 +5,7 @@ import { IconEye, IconEyeOff } from "@tabler/icons";
 import { Button, Input } from "@mantine/core";
 import Head from "next/head";
 import { useRef } from "react";
+import { clickEvent } from "src/types/event";
 
 const emailValidate = new RegExp(
   /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
@@ -15,7 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState<boolean>(true);
   const [errorText, setErrorText] = useState<string>("");
 
-  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+  const handleClick = (e: clickEvent): void => {
     e.preventDefault();
     setPassword(!password);
   };

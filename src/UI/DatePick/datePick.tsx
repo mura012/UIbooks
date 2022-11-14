@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Center } from "src/Layouts/Center";
 import { DatePicker } from "@mantine/dates";
+import { submitEvent } from "src/types/event";
 
 export const DatePick = () => {
   const [value, onChange] = useState<any>("");
   const [date, setDate] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (e: submitEvent): void => {
     e.preventDefault();
     if (!value) {
       setDate(true);
