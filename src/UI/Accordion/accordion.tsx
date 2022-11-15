@@ -1,5 +1,3 @@
-import { IconArrowBack, IconArrowRight } from "@tabler/icons";
-import Image from "next/image";
 import { useState } from "react";
 import { clickEvent } from "src/types/event";
 
@@ -17,18 +15,15 @@ export const Accordion = ({ color, buttonText, text }: Props) => {
     setOpen(!open);
   };
   return (
-    <>
-      <div className={bgColor}>
-        <button
-          onClick={handleClick}
-          className="rotate-90 transform transition-all"
-        >
-          <p className={open ? "rotate-90 transform" : ""}>→</p>
-          {/* <img  className={open ? "rotate-90 transform" : ""}>→</img> */}
-          {buttonText}
-        </button>
-        <p className="transition-all">{open ? text : ""}</p>
-      </div>
-    </>
+    <div>
+      <button
+        onClick={handleClick}
+        className="rotate-90 transform transition-all"
+      >
+        <p style={open ? { transform: "rotate(0.25turn)" } : undefined}>→</p>
+        <p>{buttonText}</p>
+      </button>
+      <p className={bgColor}>{open ? text : ""}</p>
+    </div>
   );
 };
