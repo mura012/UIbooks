@@ -1,13 +1,11 @@
 import { MouseEventHandler, useState } from "react";
-import { clickEvent } from "src/types/event";
 
 type Props = {
-  color: string;
   buttonText: string;
   text: string;
 };
 
-export const Accordion = ({ color, buttonText, text }: Props) => {
+export const Accordion = ({ buttonText, text }: Props) => {
   const [open, setOpen] = useState<boolean>(false);
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -27,7 +25,7 @@ export const Accordion = ({ color, buttonText, text }: Props) => {
         </p>
         <p className="ml-4">{buttonText}</p>
       </div>
-      <p style={{ backgroundColor: color }}> {open ? text : ""} </p>
+      <p> {open ? text : ""} </p>
     </div>
   );
 };

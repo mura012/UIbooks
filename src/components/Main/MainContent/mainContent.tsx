@@ -4,8 +4,8 @@ import { Accordion } from "src/UI/Accordion";
 export const MainContent = () => {
   return (
     <main className="grow bg-green-100">
-      <Accordion color="red" buttonText="開く上" text="テキスト上" />
-      <Accordion color="yellow" buttonText="開く下" text="テキスト下" />
+      <Accordion buttonText="開く上" text="テキスト上" />
+      <Accordion buttonText="開く下" text="テキスト下" />
     </main>
   );
 };
