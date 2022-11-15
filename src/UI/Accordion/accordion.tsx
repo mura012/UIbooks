@@ -12,7 +12,7 @@ export const Accordion = ({ buttonText, text }: Props) => {
     setOpen(!open);
   };
   return (
-    <div onClick={handleClick} className="w-screen">
+    <div onClick={handleClick} className="w-full border border-solid">
       <div className="flex hover:bg-gray-200">
         <p
           style={
