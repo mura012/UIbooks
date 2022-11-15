@@ -12,8 +12,8 @@ export const Accordion = ({ buttonText, text }: Props) => {
     setOpen(!open);
   };
   return (
-    <div onClick={handleClick} className="w-full">
-      <div className="flex hover:bg-gray-200">
+    <div className="w-full">
+      <div className="flex hover:bg-gray-200" onClick={handleClick}>
         <p
           style={
             open
