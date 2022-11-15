@@ -14,11 +14,11 @@ type Data = {
   icon: ReactElement<TablerIcon>;
 };
 
-const data: Data[] = [
-  { link: "/", label: "test", icon: <IconHome /> },
-  { link: "", label: "blog", icon: <IconBook /> },
-  { link: "", label: "book", icon: <IconPencil /> },
-  { link: "", label: "portfolio", icon: <IconPaperBag /> },
+const link: Data[] = [
+  { link: "/", label: "Home", icon: <IconHome /> },
+  { link: "", label: "Blog", icon: <IconBook /> },
+  { link: "", label: "Book", icon: <IconPencil /> },
+  { link: "", label: "Portfolio", icon: <IconPaperBag /> },
 ];
 
 export const Header = () => {
@@ -27,7 +27,7 @@ export const Header = () => {
       <div>UIbooks</div>
       <nav>
         <ul className="flex space-x-2">
-          {data.map((item) => {
+          {link.map((item) => {
             return (
               <li key={item.label}>
                 <Link href={item.link}>
