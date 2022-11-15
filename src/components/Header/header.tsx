@@ -16,7 +16,7 @@ type Data = {
 
 const link: Data[] = [
   { link: "/", label: "Home", icon: <IconHome /> },
-  { link: "", label: "Blog", icon: <IconBook /> },
+  { link: "blog", label: "Blog", icon: <IconBook /> },
   { link: "", label: "Book", icon: <IconPencil /> },
   { link: "", label: "Portfolio", icon: <IconPaperBag /> },
 ];
