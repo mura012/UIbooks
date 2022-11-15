@@ -32,4 +32,10 @@ export const blogData: Props[] = [
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit?",
     author: "木村",
   },
+  {
+    id: 5,
+    title: "5つ目のブログ",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit?",
+    author: "木村",
+  },
 ];

@@ -7,7 +7,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <Header />
-      <div className="flex h-[88vh]">
+      <div className="flex min-h-[88vh]">
         <Sidebar />
         {children}
       </div>
