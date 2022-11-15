@@ -4,8 +4,8 @@ import {
   IconPencil,
   IconBook,
   IconPaperBag,
-  IconPaperclip,
   TablerIcon,
+  IconHome,
 } from "@tabler/icons";
 
 type Data = {
@@ -15,10 +15,10 @@ type Data = {
 };
 
 const data: Data[] = [
+  { link: "/", label: "test", icon: <IconHome /> },
   { link: "", label: "blog", icon: <IconBook /> },
   { link: "", label: "book", icon: <IconPencil /> },
   { link: "", label: "portfolio", icon: <IconPaperBag /> },
-  { link: "", label: "test", icon: <IconPaperclip /> },
 ];
 
 export const Header = () => {
