@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { Layout } from "src/Layouts/Layout";
@@ -12,7 +13,8 @@ const BlogPage = () => {
     <Layout>
       <div className="flex w-full flex-col items-center justify-center">
         <h1>{item.title}</h1>
-        <p>{item.text}</p>
+        <p className="max-w-xl">{item.text}</p>
+        <Link href="/blog">もどる</Link>
       </div>
     </Layout>
   );
