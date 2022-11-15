@@ -6,7 +6,7 @@ import { blogData } from "src/Mock/blogData";
 const BlogPage = () => {
   const router = useRouter();
   let pageId = Number(router.query.id);
-  const item = blogData[(pageId = 1)];
+  const item = blogData[pageId - 1];
   console.log(pageId);
 
   return (
