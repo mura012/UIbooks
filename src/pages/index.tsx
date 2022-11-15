@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Main } from "src/components/Main";
+import { MainContent } from "src/components/MainContent";
 import { Layout } from "src/Layouts/Layout";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <title>ホームページ</title>
       </Head>
       <Layout>
-        <Main />
+        <MainContent />
       </Layout>
     </>
   );
