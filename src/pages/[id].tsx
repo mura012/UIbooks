@@ -8,7 +8,6 @@ const BlogPage = () => {
   let pageId = Number(router.query.id);
   const item = blogData[pageId - 1];
   console.log(pageId);
-
   return (
     <Layout>
       <div className="flex w-full flex-col items-center justify-center">

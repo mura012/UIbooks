@@ -10,7 +10,7 @@ export const blogData: Props[] = [
   {
     id: 1,
     title: "1つ目のブログ",
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste id consectetur distinctio soluta ea sit doloribus laboriosam deleniti, explicabo dignissimos iusto, iure omnis, similique optio suscipit nostrum quod minus reiciendis?",
     author: "むら",
     img: "/image.jpeg",
   },

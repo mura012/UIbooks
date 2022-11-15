@@ -13,9 +13,9 @@ const Blog = () => {
             return (
               <li key={item.id}>
                 <Link href={`/${item.id}`}>
-                  <div className="mb-4 border border-solid p-3 shadow-lg">
+                  <div className="mb-4 max-w-xl border border-solid p-3 shadow-lg">
                     <p className="font-bold">{item.title}</p>
-                    <p>{item.text}</p>
+                    <p className="line-clamp-3">{item.text}</p>
                     {item.img ? (
                       <Image src={item.img} width={30} height={30} alt="画像" />
                     ) : (
