@@ -2,45 +2,51 @@ import { Button } from "@mantine/core";
 import { clickEvent } from "src/types/event";
 import React, { useState } from "react";
 
+type Props = {
+  num: number;
+  check: boolean;
+};
+
+const star: Props[] = [
+  { num: 1, check: false },
+  { num: 2, check: false },
+  { num: 3, check: false },
+  { num: 4, check: false },
+  { num: 5, check: false },
+];
 export const Rating = () => {
-  const [check1, setCheck1] = useState<boolean>(false);
-  const [check2, setCheck2] = useState<boolean>(false);
-  const [check3, setCheck3] = useState<boolean>(false);
-  const [check4, setCheck4] = useState<boolean>(false);
-  const [check5, setCheck5] = useState<boolean>(false);
-
-  const star = [
-    { num: 1, check: check1, change: setCheck1 },
-    { num: 2, check: check2, change: setCheck2 },
-    { num: 3, check: check3, change: setCheck3 },
-    { num: 4, check: check4, change: setCheck4 },
-    { num: 5, check: check5, change: setCheck5 },
-  ];
-
-  const middleware = (e: clickEvent) => {
-    e.preventDefault();
-    setCheck1(false);
-    setCheck2(false);
-    setCheck3(false);
-    setCheck4(false);
-    setCheck5(false);
-  };
+  const [stars, setStars] = useState<Props[]>(star);
 
   const handleClick = (e: clickEvent, num: number) => {
-    middleware(e);
-    for (let i = 0; i < num; i++) {
-      star[i].change(true);
-    }
+    e.preventDefault();
+    setStars((prevStars) => {
+      return prevStars.map((item) => {
+        // 押した星の番号より大きいものをfalse
+        if (item.num > num) {
+          return { ...item, check: false };
+        }
+        // 押した星の番号以下のものをtrue
+        if (item.num <= num) {
+          return { ...item, check: true };
+        }
+        return item;
+      });
+    });
   };
   const handleClear = (e: clickEvent) => {
-    middleware(e);
+    e.preventDefault();
+    setStars((prevStars) => {
+      return prevStars.map((item) => {
+        return { ...item, check: false };
+      });
+    });
   };
-  const result = star.filter((item) => item.check === true);
+  const result = stars.filter((item) => item.check === true);
 
   return (
     <div className="m-4 w-1/6 min-w-fit border-2 border-solid bg-white p-3">
       <ul className="m-2 flex">
-        {star.map((item) => {
+        {stars.map((item) => {
           return (
             <li key={item.num}>
               <button
