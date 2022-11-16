@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { BackButton } from "src/components/BackButton";
 import { Layout } from "src/Layouts/Layout";
 import { blogData } from "src/Mock/blogData";
 
@@ -14,7 +14,7 @@ const BlogPage = () => {
       <div className="flex w-full flex-col items-center justify-center">
         <h1>{item.title}</h1>
         <p className="max-w-xl">{item.text}</p>
-        <Link href="/blog">もどる</Link>
+        <BackButton href="/blog" />
       </div>
     </Layout>
   );

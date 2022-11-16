@@ -6,6 +6,7 @@ import { Button, Input } from "@mantine/core";
 import Head from "next/head";
 import { useRef } from "react";
 import { clickEvent } from "src/types/event";
+import { BackButton } from "src/components/BackButton";
 
 const emailValidate = new RegExp(
   /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
@@ -74,7 +75,7 @@ const Login = () => {
             ログイン
           </Button>
         </form>
-        <Link href="/">戻る</Link>
+        <BackButton href="/" />
       </Center>
     </>
   );
