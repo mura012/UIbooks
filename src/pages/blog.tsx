@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Sidebar } from "src/components/Sidebar";
 import { Layout } from "src/Layouts/Layout";
 import { blogData } from "src/Mock/blogData";
 
 const Blog = () => {
   return (
     <Layout>
+      <Sidebar />
       <div className="flex w-full justify-center">
         <ul>
           {blogData.map((item) => {

@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { BackButton } from "src/components/BackButton";
+import { Sidebar } from "src/components/Sidebar";
 import { Layout } from "src/Layouts/Layout";
 import { blogData } from "src/Mock/blogData";
 
@@ -11,6 +12,7 @@ const BlogPage = () => {
   console.log(pageId);
   return (
     <Layout>
+      <Sidebar />
       <div className="flex w-full flex-col items-center justify-center">
         <h1>{item.title}</h1>
         <p className="max-w-xl">{item.text}</p>
