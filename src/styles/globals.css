@@ -16,3 +16,6 @@ a {
 p {
   margin: 0;
 }
+textarea {
+  resize: none;
+}

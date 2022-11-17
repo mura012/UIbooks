@@ -44,7 +44,7 @@ export const Rating = () => {
   const result = stars.filter((item) => item.check === true);
 
   return (
-    <div className="flex w-1/6 min-w-fit items-center bg-white ">
+    <div className="flex min-w-fit items-center bg-white">
       <ul className="flex">
         {stars.map((item) => {
           return (
