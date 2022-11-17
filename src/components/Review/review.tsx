@@ -4,10 +4,8 @@ import { Rating } from "src/UI/Rating";
 export const Review = () => {
   return (
     <div className="m-auto">
-      <label>
-        <h3>総合評価</h3>
-        <Rating />
-      </label>
+      <h3>総合評価</h3>
+      <Rating />
       <label>
         <h3>レビュータイトル</h3>
         <input type="text" />
