@@ -34,49 +34,44 @@ const Login = () => {
   };
 
   return (
-    <>
-      <Head>
-        <title>ログインページ</title>
-      </Head>
-      <Center>
-        <form className="w-80 bg-gray-50 p-5 shadow-md">
-          <label>
-            <p>メールアドレス</p>
+    <Center title="ログインページ">
+      <form className="w-80 bg-gray-50 p-5 shadow-md">
+        <label>
+          <p>メールアドレス</p>
+          <Input
+            type="email"
+            autoComplete="off"
+            ref={ref}
+            placeholder="sample@gmail.com"
+          />
+          <p className="text-red-500">{errorText}</p>
+        </label>
+        <label>
+          <p className="mt-4">パスワード</p>
+          <div className="flex justify-between">
             <Input
-              type="email"
+              type={password ? "password" : "text"}
               autoComplete="off"
-              ref={ref}
-              placeholder="sample@gmail.com"
+              radius="xs"
+              className="grow"
             />
-            <p className="text-red-500">{errorText}</p>
-          </label>
-          <label>
-            <p className="mt-4">パスワード</p>
-            <div className="flex justify-between">
-              <Input
-                type={password ? "password" : "text"}
-                autoComplete="off"
-                radius="xs"
-                className="grow"
-              />
-              <Button
-                onClick={handleClick}
-                className="flex items-center border-0"
-                variant="outline"
-                color="dark"
-                radius="xs"
-              >
-                {password ? <IconEye /> : <IconEyeOff />}
-              </Button>
-            </div>
-          </label>
-          <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
-            ログイン
-          </Button>
-        </form>
-        <BackButton href="/" />
-      </Center>
-    </>
+            <Button
+              onClick={handleClick}
+              className="flex items-center border-0"
+              variant="outline"
+              color="dark"
+              radius="xs"
+            >
+              {password ? <IconEye /> : <IconEyeOff />}
+            </Button>
+          </div>
+        </label>
+        <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
+          ログイン
+        </Button>
+      </form>
+      <BackButton href="/" />
+    </Center>
   );
 };
 

@@ -1,9 +1,16 @@
-import React, { ReactNode } from "react";
+import Head from "next/head";
+import React from "react";
+import { Layout } from "src/types/layout";
 
-export const Center = ({ children }: { children: ReactNode }) => {
+export const Center = ({ title, children }: Layout) => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
-      {children}
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div className="flex h-screen flex-col items-center justify-center">
+        {children}
+      </div>
+    </>
   );
 };

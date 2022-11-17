@@ -6,10 +6,7 @@ import { Layout } from "src/Layouts/Layout";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>ホームページ</title>
-      </Head>
-      <Layout>
+      <Layout title="ホームページ">
         <Sidebar />
         <MainContent />
       </Layout>

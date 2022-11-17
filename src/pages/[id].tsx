@@ -11,7 +11,7 @@ const BlogPage = () => {
   const item = blogData[pageId - 1];
   console.log(pageId);
   return (
-    <Layout>
+    <Layout title={item.title}>
       <Sidebar />
       <div className="flex w-full flex-col items-center justify-center">
         <h1>{item.title}</h1>

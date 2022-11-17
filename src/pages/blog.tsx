@@ -7,7 +7,7 @@ import { blogData } from "src/Mock/blogData";
 
 const Blog = () => {
   return (
-    <Layout>
+    <Layout title="ブログページ">
       <Sidebar />
       <div className="flex w-full justify-center">
         <ul>
