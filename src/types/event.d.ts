@@ -1,3 +1,3 @@
-export type clickEvent = React.MouseEvent<HTMLButtonElement | MouseEvent>;
+export type ClickEvent = React.MouseEvent<HTMLButtonElement | MouseEvent>;
 
-export type submitEvent = React.FormEvent<HTMLFormElement | FormEvent>;
+export type SubmitEvent = React.FormEvent<HTMLFormElement | FormEvent>;

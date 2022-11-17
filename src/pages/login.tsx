@@ -1,11 +1,10 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import { Center } from "src/Layouts/Center";
 import { IconEye, IconEyeOff } from "@tabler/icons";
 import { Button, Input } from "@mantine/core";
 import Head from "next/head";
 import { useRef } from "react";
-import { clickEvent } from "src/types/event";
+import { ClickEvent } from "src/types/event";
 import { BackButton } from "src/components/BackButton";
 
 const emailValidate = new RegExp(
@@ -17,7 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState<boolean>(true);
   const [errorText, setErrorText] = useState<string>("");
 
-  const handleClick = (e: clickEvent): void => {
+  const handleClick = (e: ClickEvent): void => {
     e.preventDefault();
     setPassword(!password);
   };

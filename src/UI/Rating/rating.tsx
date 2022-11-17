@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core";
-import { clickEvent } from "src/types/event";
+import { ClickEvent } from "src/types/event";
 import React, { useState } from "react";
 
 type Props = {
@@ -17,7 +17,7 @@ const star: Props[] = [
 export const Rating = () => {
   const [stars, setStars] = useState<Props[]>(star);
 
-  const handleClick = (e: clickEvent, num: number) => {
+  const handleClick = (e: ClickEvent, num: number) => {
     e.preventDefault();
     setStars((prevStars) => {
       return prevStars.map((item) => {
@@ -33,7 +33,7 @@ export const Rating = () => {
       });
     });
   };
-  const handleClear = (e: clickEvent) => {
+  const handleClear = (e: ClickEvent) => {
     e.preventDefault();
     setStars((prevStars) => {
       return prevStars.map((item) => {
@@ -50,7 +50,7 @@ export const Rating = () => {
           return (
             <li key={item.num}>
               <button
-                onClick={(e: clickEvent) => handleClick(e, item.num)}
+                onClick={(e: ClickEvent) => handleClick(e, item.num)}
                 className="cursor-pointer border-0 bg-white text-3xl text-yellow-400"
               >
                 {item.check ? "★" : "☆"}
