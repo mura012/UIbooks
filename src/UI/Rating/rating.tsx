@@ -44,14 +44,14 @@ export const Rating = () => {
   const result = stars.filter((item) => item.check === true);
 
   return (
-    <div className="m-4 w-1/6 min-w-fit border-2 border-solid bg-white p-3">
-      <ul className="m-2 flex">
+    <div className="flex w-1/6 min-w-fit items-center bg-white ">
+      <ul className="flex">
         {stars.map((item) => {
           return (
             <li key={item.num}>
               <button
                 onClick={(e: clickEvent) => handleClick(e, item.num)}
-                className="cursor-pointer border-0 bg-white text-xl text-yellow-400 "
+                className="cursor-pointer border-0 bg-white text-3xl text-yellow-400"
               >
                 {item.check ? "★" : "☆"}
               </button>
