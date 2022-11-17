@@ -3,7 +3,7 @@ import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import "src/styles/globals.css";
 
-export default function App(props: AppProps) {
+const App = (props: AppProps) => {
   const { Component, pageProps } = props;
 
   return (
@@ -21,4 +21,6 @@ export default function App(props: AppProps) {
       </MantineProvider>
     </>
   );
-}
+};
+
+export default App;
