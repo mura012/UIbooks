@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Center } from "src/Layouts/Center";
 import { IconEye, IconEyeOff } from "@tabler/icons";
 import { Button, Input } from "@mantine/core";
-import Head from "next/head";
 import { useRef } from "react";
 import { ClickEvent } from "src/types/event";
 import { BackButton } from "src/components/BackButton";
+import { SpeechBubble } from "src/Layouts/SpeechBubble";
 
 const emailValidate = new RegExp(
   /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
@@ -70,7 +70,12 @@ const Login = () => {
           ログイン
         </Button>
       </form>
-      <BackButton href="/" />
+      <SpeechBubble
+        title="タイトルあああああああ"
+        text="テキストああああああああああああああああああ"
+      >
+        <BackButton href="/" />
+      </SpeechBubble>
     </Center>
   );
 };
