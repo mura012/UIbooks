@@ -1,7 +1,10 @@
 import React from "react";
-import { Bubble } from "src/types/Bubble";
+import { Bubble } from "src/types/bubble";
 
-export const Body = ({ title, text }: Omit<Bubble, "children">) => {
+export const Body = ({
+  title,
+  text,
+}: Omit<Bubble, "children" | "position">) => {
   return (
     <div className="max-w-xs border-2 border-solid p-3">
       <p>

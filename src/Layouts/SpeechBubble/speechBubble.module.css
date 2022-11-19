@@ -1,12 +1,14 @@
-.test {
+.top,
+.bottom {
   display: none;
   z-index: 999;
   position: absolute;
-  /* top: 50vh;
-  right: 40vw; */
   background-color: white;
 }
 
-.group:hover .test {
+.group:hover .top {
+  display: block;
+}
+.group:hover .bottom {
   display: block;
 }

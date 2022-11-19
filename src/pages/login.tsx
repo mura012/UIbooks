@@ -66,13 +66,20 @@ const Login = () => {
             </Button>
           </div>
         </label>
-        <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
-          ログイン
-        </Button>
+        <SpeechBubble
+          title="タイトルあああああああ"
+          text="テキストああああああああああああああああああ"
+          position="bottom"
+        >
+          <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
+            ログイン
+          </Button>
+        </SpeechBubble>
       </form>
       <SpeechBubble
         title="タイトルあああああああ"
         text="テキストああああああああああああああああああ"
+        position="bottom"
       >
         <BackButton href="/" />
       </SpeechBubble>
