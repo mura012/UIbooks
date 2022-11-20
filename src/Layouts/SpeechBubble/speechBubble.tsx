@@ -29,7 +29,7 @@ export const SpeechBubble = ({ children, title, text, position }: Props) => {
     };
   }, [time]);
   return (
-    <div className={classes.group} onMouseEnter={mouseIn} onMouseOut={mouseOut}>
+    <div className={classes.group} onMouseOver={mouseIn} onMouseOut={mouseOut}>
       {position === "top" && (
         <div
           className={classes.top}
