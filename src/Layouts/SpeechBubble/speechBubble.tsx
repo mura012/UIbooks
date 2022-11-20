@@ -4,7 +4,6 @@ import { Body } from "./body";
 import classes from "./speechBubble.module.css";
 
 export const SpeechBubble = ({ children, title, text, position }: Bubble) => {
-  console.log(position === "top");
   return (
     <div className={classes.group}>
       {position === "top" && (
