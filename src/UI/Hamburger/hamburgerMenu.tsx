@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import { Burger } from "@mantine/core";
 import { ReactElement } from "react";
-import { MegaMenu } from "src/Layouts/ MegaMenu";
+import { SpeechBubble } from "src/Layouts/SpeechBubble";
 
 type Data = {
   link: string;
@@ -39,7 +39,7 @@ export const HamburgerMenu = () => {
   return (
     <>
       <div className="flex justify-start">
-        <MegaMenu
+        <SpeechBubble
           title="ハンバーガーメニュー"
           text="テキスト"
           position="bottom"
@@ -50,7 +50,7 @@ export const HamburgerMenu = () => {
             className="opacity-50"
             onClick={() => setOpened(!opened)}
           />
-        </MegaMenu>
+        </SpeechBubble>
       </div>
       <ul className="space-y-4">
         <div>

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { MegaMenu as Props } from "src/types/megaMenu";
+import React from "react";
+import { SpeechBubble as Props } from "src/types/speechBubble";
 import { Body } from "./body";
-import classes from "./megaMenu.module.css";
+import classes from "./speechBubble.module.css";
 
-export const MegaMenu = ({ children, title, text, position }: Props) => {
+export const SpeechBubble = ({ children, title, text, position }: Props) => {
   return (
     <div className={classes.group}>
       {position === "top" && (

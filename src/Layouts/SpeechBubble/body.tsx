@@ -1,10 +1,10 @@
 import React from "react";
-import { MegaMenu } from "src/types/megaMenu";
+import { SpeechBubble } from "src/types/speechBubble";
 
 export const Body = ({
   title,
   text,
-}: Omit<MegaMenu, "children" | "position">) => {
+}: Omit<SpeechBubble, "children" | "position">) => {
   return (
     <div className="max-w-xs border-2 border-solid p-3">
       <p>
