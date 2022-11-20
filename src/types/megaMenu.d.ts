@@ -1,4 +1,4 @@
-export type Bubble = {
+export type MegaMenu = {
   children: ReactNode;
   title: string;
   text: string;

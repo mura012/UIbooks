@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { Burger } from "@mantine/core";
 import { ReactElement } from "react";
+import { MegaMenu } from "src/Layouts/ MegaMenu";
 
 type Data = {
   link: string;
@@ -38,12 +39,18 @@ export const HamburgerMenu = () => {
   return (
     <>
       <div className="flex justify-start">
-        <Burger
-          size="md"
-          opened={!opened}
-          className="opacity-50"
-          onClick={() => setOpened(!opened)}
-        />
+        <MegaMenu
+          title="ハンバーガーメニュー"
+          text="テキスト"
+          position="bottom"
+        >
+          <Burger
+            size="md"
+            opened={!opened}
+            className="opacity-50"
+            onClick={() => setOpened(!opened)}
+          />
+        </MegaMenu>
       </div>
       <ul className="space-y-4">
         <div>

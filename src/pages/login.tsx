@@ -5,7 +5,7 @@ import { Button, Input } from "@mantine/core";
 import { useRef } from "react";
 import { ClickEvent } from "src/types/event";
 import { BackButton } from "src/components/BackButton";
-import { SpeechBubble } from "src/Layouts/SpeechBubble";
+import { MegaMenu } from "src/Layouts/ MegaMenu";
 
 const emailValidate = new RegExp(
   /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
@@ -66,7 +66,7 @@ const Login = () => {
             </Button>
           </div>
         </label>
-        <SpeechBubble
+        <MegaMenu
           title="タイトルあああああああ"
           text="テキストああああああああああああああああああ"
           position="bottom"
@@ -74,15 +74,15 @@ const Login = () => {
           <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
             ログイン
           </Button>
-        </SpeechBubble>
+        </MegaMenu>
       </form>
-      <SpeechBubble
+      <MegaMenu
         title="タイトルあああああああ"
         text="テキストああああああああああああああああああ"
         position="bottom"
       >
         <BackButton href="/" />
-      </SpeechBubble>
+      </MegaMenu>
     </Center>
   );
 };
