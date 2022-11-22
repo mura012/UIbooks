@@ -10,6 +10,7 @@ export const SpeechBubble = ({ children, title, text, position }: Props) => {
     setTime(true);
   };
   const mouseOut = () => {
+    setTime(false);
     setShowModal(false);
   };
 
