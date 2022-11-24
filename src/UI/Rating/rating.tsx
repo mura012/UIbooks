@@ -43,8 +43,6 @@ export const Rating = () => {
     });
   };
   const result = stars.filter((item) => item.check === true);
-<<<<<<< HEAD
-=======
 
   return (
     <div className="flex min-w-fit items-center bg-white">
@@ -73,7 +71,6 @@ export const Rating = () => {
         </Button>
         <p>評価：{result.length}/5</p>
       </div>
-    </SpeechBubble>
+    </div>
   );
->>>>>>> ea79e8f (吹き出しをいろいろなところに適用した)
 };
