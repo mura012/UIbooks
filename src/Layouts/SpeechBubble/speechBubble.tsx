@@ -21,14 +21,16 @@ export const SpeechBubble = ({
     setShowModal(false);
   };
 
+  let activeFunction: any = null;
+
   useEffect(() => {
     if (time === true) {
-      var timer = setTimeout(() => {
+      activeFunction = setTimeout(() => {
         setShowModal(true);
       }, 1000);
     }
     return () => {
-      clearTimeout(timer);
+      clearTimeout(activeFunction);
     };
   }, [time]);
 
