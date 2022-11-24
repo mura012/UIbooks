@@ -14,12 +14,16 @@ export const Body = ({
         <span className="mr-1 font-bold">{title}</span>
         {text}
       </p>
-      <p className="text-gray-400">
-        使われているサイト：
-        <Link href={link} className="text-gray-400 underline">
-          {site}
-        </Link>
-      </p>
+      <div className="text-gray-400">
+        {link && site && (
+          <span className="flex">
+            <p>使われているサイト：</p>
+            <Link href={link} className="text-gray-400 underline">
+              {site}
+            </Link>
+          </span>
+        )}
+      </div>
     </div>
   );
 };
