@@ -1,4 +1,5 @@
 import React, { ReactNode, useState } from "react";
+import { SpeechBubble } from "src/Layouts/SpeechBubble";
 import { ClickEvent } from "src/types/event";
 
 type Props = {
@@ -24,7 +25,11 @@ export const Modal = ({
   };
 
   return (
-    <div>
+    <SpeechBubble
+      title="モーダルウィンドウ"
+      text="操作が完了するまで親ウィンドウへの操作を受け付けなくさせるタイプのウィンドウ。"
+      position="bottom"
+    >
       <button onClick={handleOpen}>{openButton}</button>
       <div
         style={open ? { display: "flex" } : { display: "none" }}
@@ -38,6 +43,6 @@ export const Modal = ({
           </div>
         </div>
       </div>
-    </div>
+    </SpeechBubble>
   );
 };

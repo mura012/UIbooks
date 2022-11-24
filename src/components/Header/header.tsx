@@ -7,6 +7,7 @@ import {
   TablerIcon,
   IconHome,
 } from "@tabler/icons";
+import { SpeechBubble } from "src/Layouts/SpeechBubble";
 
 type Data = {
   link: string;
@@ -23,22 +24,28 @@ const link: Data[] = [
 
 export const Header = () => {
   return (
-    <header className="flex h-12 items-center justify-around bg-pink-500 text-2xl">
-      <div>UIbooks</div>
-      <nav>
-        <ul className="flex space-x-2">
-          {link.map((item) => {
-            return (
-              <li key={item.label}>
-                <Link href={item.link}>
-                  {item.icon}
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </header>
+    <SpeechBubble
+      title="ヘッダー"
+      text="ヘッダとは、データや文書の本体の先頭に付け加えられる、そのデータや文書自体についての情報を記述した部分のこと。サイト名やイメージ画像、グローバルナビゲーションを書く"
+      position="bottom"
+    >
+      <header className="flex h-12 items-center justify-around bg-pink-500 text-2xl">
+        <div>UIbooks</div>
+        <nav>
+          <ul className="flex space-x-2">
+            {link.map((item) => {
+              return (
+                <li key={item.label}>
+                  <Link href={item.link}>
+                    {item.icon}
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </header>
+    </SpeechBubble>
   );
 };
