@@ -35,7 +35,7 @@ export const Modal = ({
         style={open ? { display: "flex" } : { display: "none" }}
         className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-400 opacity-50 "
       >
-        <div className="rounded-md bg-white opacity-100 shadow-sm">
+        <div className="rounded-md bg-white p-12 opacity-100 shadow-sm">
           {children}
           <div className="w-full space-x-3 rounded-3xl text-right">
             <button onClick={handleCloce}>{cancelButton}</button>
