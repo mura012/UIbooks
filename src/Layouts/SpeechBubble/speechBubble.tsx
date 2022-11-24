@@ -3,7 +3,14 @@ import { SpeechBubble as Props } from "src/types/speechBubble";
 import { Body } from "./body";
 import classes from "./speechBubble.module.css";
 
-export const SpeechBubble = ({ children, title, text, position }: Props) => {
+export const SpeechBubble = ({
+  children,
+  title,
+  text,
+  position,
+  link,
+  site,
+}: Props) => {
   const [time, setTime] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const mouseIn = () => {
@@ -36,7 +43,7 @@ export const SpeechBubble = ({ children, title, text, position }: Props) => {
           className={classes.top}
           style={showModal ? { display: "block" } : { display: "none" }}
         >
-          <Body text={text} title={title} />
+          <Body text={text} title={title} link={link} site={site} />
         </div>
       )}
       {children}
@@ -45,7 +52,7 @@ export const SpeechBubble = ({ children, title, text, position }: Props) => {
           className={classes.bottom}
           style={showModal ? { display: "block" } : { display: "none" }}
         >
-          <Body text={text} title={title} />
+          <Body text={text} title={title} link={link} site={site} />
         </div>
       )}
     </div>

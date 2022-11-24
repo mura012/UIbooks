@@ -41,7 +41,9 @@ export const HamburgerMenu = () => {
       <div className="flex justify-start">
         <SpeechBubble
           title="ハンバーガーメニュー"
-          text="テキスト"
+          text="主にスマートフォンやタブレットに対応したWebサイトで見かける三本線「≡」のアイコンを使ったナビゲーションメニューで、タップ・クリックすると操作項目が出現するものを指します。 3本線のデザインがハンバーガーの形に見えることに由来します。"
+          link="https://www.youtube.com/"
+          site="youtube"
           position="bottom"
         >
           <Burger
