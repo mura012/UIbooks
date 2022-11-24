@@ -43,4 +43,37 @@ export const Rating = () => {
     });
   };
   const result = stars.filter((item) => item.check === true);
+<<<<<<< HEAD
+=======
+
+  return (
+    <div className="flex min-w-fit items-center bg-white">
+      <ul className="flex">
+        {stars.map((item) => {
+          return (
+            <li key={item.num}>
+              <button
+                onClick={(e: ClickEvent) => handleClick(e, item.num)}
+                className="cursor-pointer border-0 bg-white text-3xl text-yellow-400"
+              >
+                {item.check ? "★" : "☆"}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="flex items-center">
+        <Button
+          onClick={(e: clickEvent) => {
+            handleClear(e);
+          }}
+          className="m-2"
+        >
+          クリア
+        </Button>
+        <p>評価：{result.length}/5</p>
+      </div>
+    </SpeechBubble>
+  );
+>>>>>>> ea79e8f (吹き出しをいろいろなところに適用した)
 };
