@@ -1,18 +1,12 @@
 import React from "react";
-import { Accordion } from "src/UI/Accordion";
-import { AccordionWrapper } from "src/UI/Accordion";
+import { Modal, ModalChildren } from "src/UI/Modal";
 
 export const MainContent = () => {
   return (
     <main className="grow bg-green-100">
-      <AccordionWrapper>
-        <Accordion buttonText="開く上" text="テキスト上" />
-        <Accordion buttonText="開く下" text="テキスト下" />
-      </AccordionWrapper>
-      <AccordionWrapper>
-        <Accordion buttonText="開く上" text="テキスト上" />
-        <Accordion buttonText="開く下" text="テキスト下" />
-      </AccordionWrapper>
+      <Modal>
+        <ModalChildren title="children" body="ほんぶんあああああ" />
+      </Modal>
     </main>
   );
 };
