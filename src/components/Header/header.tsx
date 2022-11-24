@@ -18,7 +18,7 @@ const link: Data[] = [
   { link: "/", label: "Home", icon: <IconHome /> },
   { link: "blog", label: "Blog", icon: <IconBook /> },
   { link: "", label: "Book", icon: <IconPencil /> },
-  { link: "", label: "Portfolio", icon: <IconPaperBag /> },
+  { link: "/test", label: "Test", icon: <IconPaperBag /> },
 ];
 
 export const Header = () => {
