@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { ClickEvent } from "src/types/event";
 import { BackButton } from "src/components/BackButton";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
+import { useToggle } from "src/Fooks/useToggle";
 
 const emailValidate = new RegExp(
   /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
@@ -13,13 +14,9 @@ const emailValidate = new RegExp(
 
 const Login = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const [password, setPassword] = useState<boolean>(true);
   const [errorText, setErrorText] = useState<string>("");
+  const { toggle, handleToggle } = useToggle();
 
-  const handleClick = (e: ClickEvent): void => {
-    e.preventDefault();
-    setPassword(!password);
-  };
   const handleLogin = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     e.preventDefault();
     if (!ref.current?.value) {
@@ -50,19 +47,19 @@ const Login = () => {
           <p className="mt-4">パスワード</p>
           <div className="flex justify-between">
             <Input
-              type={password ? "password" : "text"}
+              type={toggle ? "text" : "password"}
               autoComplete="off"
               radius="xs"
               className="grow"
             />
             <Button
-              onClick={handleClick}
+              onClick={handleToggle}
               className="flex items-center border-0"
               variant="outline"
               color="dark"
               radius="xs"
             >
-              {password ? <IconEye /> : <IconEyeOff />}
+              {toggle ? <IconEye /> : <IconEyeOff />}
             </Button>
           </div>
         </label>

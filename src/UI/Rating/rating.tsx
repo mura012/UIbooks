@@ -61,7 +61,7 @@ export const Rating = () => {
       </ul>
       <div className="flex items-center">
         <Button
-          onClick={(e: clickEvent) => {
+          onClick={(e: ClickEvent) => {
             handleClear(e);
           }}
           className="m-2"
