@@ -4,11 +4,9 @@ import { Layout } from "src/Layouts/Layout";
 
 export default function Home() {
   return (
-    <>
-      <Layout title="ホームページ">
-        <Sidebar />
-        <MainContent />
-      </Layout>
-    </>
+    <Layout title="ホームページ">
+      <Sidebar />
+      <MainContent />
+    </Layout>
   );
 }

@@ -6,12 +6,12 @@ import { Layout as Props } from "src/types/layout";
 
 export const Layout = ({ title, children }: Props) => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>{title}</title>
       </Head>
       <Header />
-      <div className="flex min-h-[88vh]">{children}</div>
+      <div className="flex flex-1">{children}</div>
       <Footer />
     </div>
   );
