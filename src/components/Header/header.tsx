@@ -26,7 +26,7 @@ export const Header = () => {
   return (
     <SpeechBubble
       title="ヘッダー"
-      text="ヘッダとは、データや文書の本体の先頭に付け加えられる、そのデータや文書自体についての情報を記述した部分のこと。サイト名やイメージ画像、グローバルナビゲーションを書く"
+      text="データや文書の本体の先頭に付け加えられる、そのデータや文書自体についての情報を記述した部分のこと。サイト名やイメージ画像、グローバルナビゲーションを書く"
       position="bottom"
     >
       <header className="flex h-12 items-center justify-around bg-pink-500 text-2xl">
