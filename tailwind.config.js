@@ -9,11 +9,7 @@ module.exports = {
       lg: "1200px",
       xl: "1400px",
     },
-    extend: {
-      colors: {
-        transparentGray: "rgba(181, 181, 181, 0.5)",
-      },
-    },
+    extend: {},
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };

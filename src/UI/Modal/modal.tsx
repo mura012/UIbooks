@@ -33,7 +33,7 @@ export const Modal = ({
       <button onClick={handleOpen}>{openButton}</button>
       <div
         style={open ? { display: "flex" } : { display: "none" }}
-        className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-transparentGray"
+        className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
       >
         <div className="rounded-md bg-white p-12 opacity-100 shadow-sm">
           {children}
