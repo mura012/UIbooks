@@ -21,9 +21,9 @@ export const SpeechBubble = ({
     setShowModal(false);
   };
 
-  let activeFunction: any = null;
-
   useEffect(() => {
+    let activeFunction: string | number | NodeJS.Timeout | undefined =
+      undefined;
     if (time === true) {
       activeFunction = setTimeout(() => {
         setShowModal(true);
