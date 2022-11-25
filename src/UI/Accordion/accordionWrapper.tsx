@@ -8,7 +8,7 @@ export const AccordionWrapper = ({ children }: { children: ReactNode }) => {
       text="Webページなどの表示・操作要素の一つで、選択した項目がその場で広がって詳細な内容を表示する形式のメニューのこと。"
       position="bottom"
     >
-      <div className="m-2 border border-solid">{children}</div>;
+      <div className="m-2 border border-solid">{children}</div>
     </SpeechBubble>
   );
 };
