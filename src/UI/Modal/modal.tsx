@@ -27,14 +27,14 @@ export const Modal = ({
   return (
     <>
       <button onClick={handleOpen}>{openButton}</button>
-      <SpeechBubble
-        title="モーダルウィンドウ"
-        text="操作が完了するまで親ウィンドウへの操作を受け付けなくさせるタイプのウィンドウ。"
-        position="bottom"
+      <div
+        style={open ? { display: "flex" } : { display: "none" }}
+        className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
       >
-        <div
-          style={open ? { display: "flex" } : { display: "none" }}
-          className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
+        <SpeechBubble
+          title="モーダルウィンドウ"
+          text="操作が完了するまで親ウィンドウへの操作を受け付けなくさせるタイプのウィンドウ。"
+          position="bottom"
         >
           <div className="rounded-md bg-white p-12 opacity-100 shadow-sm">
             {children}
@@ -43,8 +43,8 @@ export const Modal = ({
               <button onClick={handleCloce}>{okButton}</button>
             </div>
           </div>
-        </div>
-      </SpeechBubble>
+        </SpeechBubble>
+      </div>
     </>
   );
 };
