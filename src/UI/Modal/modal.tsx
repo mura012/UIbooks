@@ -25,24 +25,26 @@ export const Modal = ({
   };
 
   return (
-    <SpeechBubble
-      title="モーダルウィンドウ"
-      text="操作が完了するまで親ウィンドウへの操作を受け付けなくさせるタイプのウィンドウ。"
-      position="bottom"
-    >
+    <>
       <button onClick={handleOpen}>{openButton}</button>
-      <div
-        style={open ? { display: "flex" } : { display: "none" }}
-        className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
+      <SpeechBubble
+        title="モーダルウィンドウ"
+        text="操作が完了するまで親ウィンドウへの操作を受け付けなくさせるタイプのウィンドウ。"
+        position="bottom"
       >
-        <div className="rounded-md bg-white p-12 opacity-100 shadow-sm">
-          {children}
-          <div className="w-full space-x-3 rounded-3xl text-right">
-            <button onClick={handleCloce}>{cancelButton}</button>
-            <button onClick={handleCloce}>{okButton}</button>
+        <div
+          style={open ? { display: "flex" } : { display: "none" }}
+          className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
+        >
+          <div className="rounded-md bg-white p-12 opacity-100 shadow-sm">
+            {children}
+            <div className="w-full space-x-3 rounded-3xl text-right">
+              <button onClick={handleCloce}>{cancelButton}</button>
+              <button onClick={handleCloce}>{okButton}</button>
+            </div>
           </div>
         </div>
-      </div>
-    </SpeechBubble>
+      </SpeechBubble>
+    </>
   );
 };
