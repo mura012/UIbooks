@@ -17,7 +17,7 @@ const Blog = () => {
             }
             return (
               <li key={item.id}>
-                <Link href={`/${item.id}`}>
+                <Link href={`/blog/${item.id}`}>
                   <div className="mb-4 max-w-xl border border-solid p-3 shadow-lg">
                     <p className="font-bold">{item.title}</p>
                     <p className="line-clamp-3">{item.text}</p>

@@ -12,16 +12,16 @@ const BlogPage = () => {
   const item = blogData[pageId - 1];
 
   return (
-    <Layout title={item.title}>
+    <Layout title={item?.title}>
       <Sidebar />
       <div className="flex w-full flex-col items-center justify-center">
-        <h1>{item.title}</h1>
-        <p className="max-w-xl">{item.text}</p>
+        <h1>{item?.title}</h1>
+        <p className="max-w-xl">{item?.text}</p>
         <BackButton href="/blog" />
         <div className="mt-2 flex items-center">
-          <p className="mr-2"> 著者：{item.author}</p>
+          <p className="mr-2"> 著者：{item?.author}</p>
           <Image
-            src={item.img || "/noimage.jpeg"}
+            src={item?.img || "/noimage.jpeg"}
             width={30}
             height={30}
             alt="画像"
