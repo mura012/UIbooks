@@ -35,7 +35,7 @@ export const SpeechBubble = ({
   }, [time]);
 
   return (
-    <div onMouseEnter={mouseIn} onMouseLeave={mouseOut}>
+    <div onMouseEnter={mouseIn} onMouseLeave={mouseOut} className="w-fit">
       {position === "top" && (
         <div
           className={classes.top}
