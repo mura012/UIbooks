@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "src/UI/Badge";
+import { Badge, BadgeWrapper } from "src/UI/Badge";
 import { Modal, ModalChildren } from "src/UI/Modal";
 
 export const MainContent = () => {
@@ -8,7 +8,10 @@ export const MainContent = () => {
       <Modal>
         <ModalChildren title="children" body="ほんぶんあああああ" />
       </Modal>
-      <Badge bw="white">バッチ</Badge>
+      <BadgeWrapper>
+        <Badge bw="white">バッチ</Badge>
+        <Badge color="red">バッチ2</Badge>
+      </BadgeWrapper>
     </main>
   );
 };
