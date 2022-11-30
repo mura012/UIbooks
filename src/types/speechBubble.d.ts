@@ -5,4 +5,5 @@ export type SpeechBubble = {
   link?: Url;
   site?: string;
   position: "top" | "bottom";
+  fit?;
 };

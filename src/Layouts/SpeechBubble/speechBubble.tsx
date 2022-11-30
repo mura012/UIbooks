@@ -10,6 +10,7 @@ export const SpeechBubble = ({
   position,
   link,
   site,
+  fit,
 }: Props) => {
   const [time, setTime] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -35,7 +36,11 @@ export const SpeechBubble = ({
   }, [time]);
 
   return (
-    <div onMouseEnter={mouseIn} onMouseLeave={mouseOut} className="w-fit">
+    <div
+      onMouseEnter={mouseIn}
+      onMouseLeave={mouseOut}
+      className={fit && "w-fit"}
+    >
       {position === "top" && (
         <div
           className={classes.top}
