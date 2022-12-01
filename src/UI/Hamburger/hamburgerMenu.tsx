@@ -32,10 +32,15 @@ const data: Data[] = [
   { link: "", label: "Other Settings", icon: <IconSettings /> },
 ];
 
+const login: Data[] = [
+  { link: "", label: "Change account", icon: <IconSwitchHorizontal /> },
+  { link: "", label: "Login", icon: <IconLogout /> },
+];
+
 export const HamburgerMenu = () => {
   const [opened, setOpened] = useState<boolean>(false);
   const listStyle =
-    "p-1.5 opacity-50 hover:rounded-full hover:bg-green-500 hover:opacity-100 flex cursor-pointer";
+    "p-1.5 hover:rounded-full hover:bg-green-500 flex cursor-pointer";
   return (
     <>
       <div className="flex justify-start">
@@ -49,40 +54,36 @@ export const HamburgerMenu = () => {
           <Burger
             size="md"
             opened={!opened}
-            className="opacity-50"
             onClick={() => setOpened(!opened)}
           />
         </SpeechBubble>
       </div>
-      <ul className="space-y-4">
-        <div>
-          {data.map((item) => {
-            return (
-              <li key={item.label} className={listStyle}>
-                <Link href={item.link} className="flex">
-                  {item.icon}
-                  {opened ? null : item.label}
-                  {/* {!opened && item.label} */}
-                </Link>
-              </li>
-            );
-          })}
-        </div>
-        <hr className="w-4/5 " />
-        <div className="mb-4 flex flex-col items-start ">
-          <li>
-            <Link href="/" className={listStyle}>
-              <IconSwitchHorizontal className="cursor-pointer" />
-              {opened ? null : "Change account"}
-            </Link>
-          </li>
-          <li>
-            <Link href="/login" className={listStyle}>
-              <IconLogout />
-              {opened ? null : "Login"}
-            </Link>
-          </li>
-        </div>
+      <ul className="space-y-1">
+        {data.map((item) => {
+          return (
+            <li key={item.label} className={listStyle}>
+              <Link href={item.link} className="flex">
+                {item.icon}
+                {opened ? null : item.label}
+                {/* {!opened && item.label} */}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <hr className="w-4/5" />
+      <ul className="space-y-1">
+        {login.map((item) => {
+          return (
+            <li key={item.label} className={listStyle}>
+              <Link href={item.link} className="flex">
+                {item.icon}
+                {opened ? null : item.label}
+                {/* {!opened && item.label} */}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </>
   );
