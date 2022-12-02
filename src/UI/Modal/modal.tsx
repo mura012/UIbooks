@@ -1,6 +1,6 @@
-import React, { ReactNode, useState } from "react";
+import { ReactNode } from "react";
+import { useToggle } from "src/Fooks/useToggle";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
-import { ClickEvent } from "src/types/event";
 
 type Props = {
   children: ReactNode;
@@ -15,20 +15,13 @@ export const Modal = ({
   okButton = "OK",
   cancelButton = "Cancel",
 }: Props) => {
-  const [open, setOpen] = useState<boolean>(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  const handleCloce = (e: ClickEvent) => {
-    e.preventDefault();
-    setOpen(false);
-  };
+  const { toggle, handleOpen, handleCloce } = useToggle();
 
   return (
     <>
       <button onClick={handleOpen}>{openButton}</button>
       <div
-        style={open ? { display: "flex" } : { display: "none" }}
+        style={toggle ? { display: "flex" } : { display: "none" }}
         className="absolute top-0 left-0 z-[999] h-screen w-full flex-col items-center justify-center bg-gray-300/50"
       >
         <SpeechBubble

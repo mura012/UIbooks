@@ -7,5 +7,13 @@ export const useToggle = () => {
     e.preventDefault();
     setToggle((prevToggle) => !prevToggle);
   };
-  return { toggle, handleToggle };
+  const handleOpen = (e: ClickEvent) => {
+    e.preventDefault();
+    setToggle(true);
+  };
+  const handleCloce = (e: ClickEvent) => {
+    e.preventDefault();
+    setToggle(false);
+  };
+  return { toggle, setToggle, handleToggle, handleOpen, handleCloce };
 };

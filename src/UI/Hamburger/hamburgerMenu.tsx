@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   IconBellRinging,
   IconFingerprint,
@@ -15,6 +14,7 @@ import Link from "next/link";
 import { Burger } from "@mantine/core";
 import { ReactElement } from "react";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
+import { useToggle } from "src/Fooks/useToggle";
 
 type Data = {
   link: string;
@@ -38,7 +38,7 @@ const login: Data[] = [
 ];
 
 export const HamburgerMenu = () => {
-  const [opened, setOpened] = useState<boolean>(false);
+  const { toggle, setToggle } = useToggle();
   const listStyle =
     "p-1.5 hover:rounded-full hover:bg-green-500 flex cursor-pointer";
   return (
@@ -53,8 +53,8 @@ export const HamburgerMenu = () => {
         >
           <Burger
             size="md"
-            opened={!opened}
-            onClick={() => setOpened(!opened)}
+            opened={!toggle}
+            onClick={() => setToggle(!toggle)}
           />
         </SpeechBubble>
       </div>
@@ -64,7 +64,7 @@ export const HamburgerMenu = () => {
             <li key={item.label} className={listStyle}>
               <Link href={item.link} className="flex">
                 {item.icon}
-                {opened ? null : item.label}
+                {toggle ? null : item.label}
                 {/* {!opened && item.label} */}
               </Link>
             </li>
@@ -78,7 +78,7 @@ export const HamburgerMenu = () => {
             <li key={item.label} className={listStyle}>
               <Link href={item.link} className="flex">
                 {item.icon}
-                {opened ? null : item.label}
+                {toggle ? null : item.label}
                 {/* {!opened && item.label} */}
               </Link>
             </li>
