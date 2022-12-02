@@ -1,4 +1,3 @@
-import React from "react";
 import { HamburgerMenu } from "src/UI/Hamburger";
 
 export const Sidebar = () => {

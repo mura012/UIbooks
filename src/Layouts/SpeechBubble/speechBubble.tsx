@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SpeechBubble as Props } from "src/types/speechBubble";
 import { Body } from "./body";
 import classes from "./speechBubble.module.css";
@@ -25,7 +25,7 @@ export const SpeechBubble = ({
   useEffect(() => {
     let activeFunction: string | number | NodeJS.Timeout | undefined =
       undefined;
-    if (time === true) {
+    if (time) {
       activeFunction = setTimeout(() => {
         setShowModal(true);
       }, 1000);

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { SpeechBubble } from "src/types/speechBubble";
 
 export const Body = ({

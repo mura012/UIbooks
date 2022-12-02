@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { Color } from "src/types/tailwindColor";
 
 type Props = {

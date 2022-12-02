@@ -1,6 +1,5 @@
 import { IconArrowBack } from "@tabler/icons";
 import Link from "next/link";
-import React from "react";
 
 type Prop = {
   href: string;

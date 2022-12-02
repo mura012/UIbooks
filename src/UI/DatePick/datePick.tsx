@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Center } from "src/Layouts/Center";
 import { DatePicker } from "@mantine/dates";
 import { SubmitEvent } from "src/types/event";

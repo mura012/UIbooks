@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout } from "src/Layouts/Layout";
 import { Accordion, AccordionWrapper } from "src/UI/Accordion";
 import { DatePick } from "src/UI/DatePick";

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
 import { BackButton } from "src/components/BackButton";
 import { Sidebar } from "src/components/Sidebar";
 import { Layout } from "src/Layouts/Layout";

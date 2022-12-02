@@ -1,5 +1,4 @@
 import { IconCircle } from "@tabler/icons";
-import React from "react";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
 import { ClickEvent } from "src/types/event";
 

@@ -1,6 +1,6 @@
 import { Button } from "@mantine/core";
 import { ClickEvent } from "src/types/event";
-import React, { useState } from "react";
+import { useState } from "react";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
 
 type Props = {

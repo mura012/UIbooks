@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { Sidebar } from "src/components/Sidebar";
 import { Layout } from "src/Layouts/Layout";
 import { blogData } from "src/Mock/blogData";

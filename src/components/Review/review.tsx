@@ -1,4 +1,3 @@
-import React from "react";
 import { Rating } from "src/UI/Rating";
 
 export const Review = () => {
