@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "src/Layouts/Layout";
 import { Accordion, AccordionWrapper } from "src/UI/Accordion";
+import { DatePick } from "src/UI/DatePick";
 import { Modal, ModalChildren } from "src/UI/Modal";
 import { Rating } from "src/UI/Rating";
 
@@ -18,6 +19,7 @@ const Test = () => {
         <AccordionWrapper>
           <Accordion buttonText="ボタン" text="中身" />
         </AccordionWrapper>
+        <DatePick />
       </div>
     </Layout>
   );

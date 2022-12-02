@@ -5,7 +5,7 @@ import { SubmitEvent } from "src/types/event";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
 
 export const DatePick = () => {
-  const [value, onChange] = useState<any>("");
+  const [value, onChange] = useState<Date | null | undefined>();
   const [date, setDate] = useState<boolean>(false);
 
   const handleSubmit = (e: SubmitEvent): void => {
