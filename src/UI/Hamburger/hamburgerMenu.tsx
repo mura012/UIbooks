@@ -34,7 +34,7 @@ const data: Data[] = [
 
 const login: Data[] = [
   { link: "", label: "Change account", icon: <IconSwitchHorizontal /> },
-  { link: "", label: "Login", icon: <IconLogout /> },
+  { link: "/login", label: "Login", icon: <IconLogout /> },
 ];
 
 export const HamburgerMenu = () => {
