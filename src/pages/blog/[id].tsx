@@ -13,7 +13,7 @@ const BlogPage = () => {
   return (
     <Layout title={item?.title}>
       <Sidebar />
-      <div className="flex w-full flex-col items-center justify-center">
+      <div className="m-auto flex flex-col items-center justify-center">
         <h1>{item?.title}</h1>
         <p className="max-w-xl">{item?.text}</p>
         <BackButton href="/blog" />

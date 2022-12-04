@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <Layout title="ブログページ">
       <Sidebar />
-      <div className="flex w-full justify-center">
+      <div className="m-auto flex justify-center">
         <ul>
           {blogData.map((item) => {
             if (!item.img) {

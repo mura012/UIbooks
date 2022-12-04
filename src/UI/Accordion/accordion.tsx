@@ -1,3 +1,4 @@
+import { IconChevronRight } from "@tabler/icons";
 import { useToggle } from "src/Fooks/useToggle";
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 export const Accordion = ({ buttonText, text }: Props) => {
   const { toggle, handleToggle } = useToggle();
   return (
-    <div className="w-full">
+    <div className="min-w-max">
       <div className="flex hover:bg-gray-200" onClick={handleToggle}>
         <p
           style={
@@ -17,7 +18,7 @@ export const Accordion = ({ buttonText, text }: Props) => {
               : { transition: "all 0.3s" }
           }
         >
-          →
+          <IconChevronRight />
         </p>
         <p className="ml-4">{buttonText}</p>
       </div>
