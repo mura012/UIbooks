@@ -47,7 +47,7 @@ const Login = () => {
           <p className="mt-4">パスワード</p>
           <div className="flex justify-between">
             <Input
-              type={toggle ? "text" : "password"}
+              type={toggle ? "password" : "text"}
               autoComplete="off"
               radius="xs"
               className="grow"
