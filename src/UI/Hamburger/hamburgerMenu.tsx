@@ -39,6 +39,7 @@ const login: Data[] = [
 
 export const HamburgerMenu = () => {
   const { toggle, setToggle } = useToggle();
+
   const listStyle =
     "p-1.5 hover:rounded-full hover:bg-green-500 flex cursor-pointer";
   return (

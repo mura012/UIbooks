@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { FocusContext } from "src/context/focusContext";
 import { SpeechBubble as Props } from "src/types/speechBubble";
 import { Body } from "./body";
 import classes from "./speechBubble.module.css";
@@ -12,6 +13,7 @@ export const SpeechBubble = ({
   site,
   fit,
 }: Props) => {
+  const [focus] = useContext(FocusContext);
   const [time, setTime] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const mouseIn = () => {
@@ -39,7 +41,7 @@ export const SpeechBubble = ({
     <div
       onMouseEnter={mouseIn}
       onMouseLeave={mouseOut}
-      className={fit && "w-fit"}
+      className={`${fit ? "w-fit" : ""}${focus ? "" : " bg-blue-300 p-1"}`}
     >
       {position === "top" && (
         <div

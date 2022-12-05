@@ -2,12 +2,12 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import "src/styles/globals.css";
+import { FocusProvider } from "src/context/focusContext";
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props;
-
   return (
-    <>
+    <FocusProvider>
       <Head>
         <title>Page title</title>
         <meta
@@ -19,7 +19,7 @@ const App = (props: AppProps) => {
       <MantineProvider>
         <Component {...pageProps} />
       </MantineProvider>
-    </>
+    </FocusProvider>
   );
 };
 

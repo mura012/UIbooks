@@ -1,3 +1,4 @@
+import { Sidebar } from "src/components/Sidebar";
 import { Layout } from "src/Layouts/Layout";
 import { Accordion, AccordionWrapper } from "src/UI/Accordion";
 import { DatePick } from "src/UI/DatePick";
@@ -9,6 +10,7 @@ const Test = () => {
   return (
     <>
       <Layout>
+        <Sidebar />
         <div className="flex flex-row">
           <Modal>
             <ModalChildren
