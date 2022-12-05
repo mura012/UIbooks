@@ -13,7 +13,7 @@ export const SpeechBubble = ({
   site,
   fit,
 }: Props) => {
-  const [focus] = useFocus();
+  const focus = useFocus();
   const [time, setTime] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const mouseIn = () => {

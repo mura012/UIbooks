@@ -8,10 +8,11 @@ type Props = {
 export const FocusProvider = ({ children }: Props) => {
   const [focus, setFocus] = useState<boolean>(false);
   return (
-    <SetContext.Provider value={[, setFocus]}>
-      <FocusContext.Provider value={[focus]}>{children}</FocusContext.Provider>
-    </SetContext.Provider>
+    <FocusContext.Provider value={focus}>
+      <SetContext.Provider value={setFocus}>{children}</SetContext.Provider>
+    </FocusContext.Provider>
   );
 };
 
 export const useFocus = () => useContext(FocusContext);
+export const useSetFocus = () => useContext(SetContext);

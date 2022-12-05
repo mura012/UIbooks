@@ -1,13 +1,14 @@
 import { IconCircle } from "@tabler/icons";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
-import { useFocus } from "src/context/focusContext";
+import { useFocus, useSetFocus } from "src/context/focusContext";
 
 const toggleAll = "flex w-14 p-0 rounded-2xl bg-white items-center";
 const toggleOn = toggleAll + " justify-start";
 const toggleOff = toggleAll + " justify-end";
 
 export const ToggleButton = () => {
-  const [focus, setFocus] = useFocus();
+  const focus = useFocus();
+  const setFocus = useSetFocus();
   const handleToggle = () => {
     setFocus((prev: boolean) => !prev);
   };
