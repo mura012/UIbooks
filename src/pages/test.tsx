@@ -24,8 +24,8 @@ const Test = () => {
           </AccordionWrapper>
           <DatePick />
         </div>
+        <Radio radioLabel={["test", "test2", "test3"]} />
       </Layout>
-      <Radio radioLabel={["test", "test2", "test3"]} />
     </>
   );
 };

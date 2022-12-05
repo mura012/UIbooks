@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SpeechBubble } from "src/Layouts/SpeechBubble";
 import { ChangeEvent } from "src/types/event";
 
 type Props = {
@@ -10,7 +11,11 @@ export const Radio = ({ radioLabel }: Props) => {
   const [value, setValue] = useState<string>(radioLabel[0]);
 
   return (
-    <>
+    <SpeechBubble
+      title="ラジオボタン"
+      text="複数の選択肢の中から1つだけ選択する場合に用いられる。"
+      position="bottom"
+    >
       {radioLabel.map((item) => {
         return (
           <label key={item}>
@@ -24,6 +29,6 @@ export const Radio = ({ radioLabel }: Props) => {
           </label>
         );
       })}
-    </>
+    </SpeechBubble>
   );
 };
