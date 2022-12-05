@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from "react";
-import { FocusContext } from "src/context/focusContext";
+import { useEffect, useState } from "react";
+import { useFocus } from "src/context/focusContext";
 import { SpeechBubble as Props } from "src/types/speechBubble";
 import { Body } from "./body";
 import classes from "./speechBubble.module.css";
@@ -13,7 +13,7 @@ export const SpeechBubble = ({
   site,
   fit,
 }: Props) => {
-  const [focus] = useContext(FocusContext);
+  const [focus] = useFocus();
   const [time, setTime] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const mouseIn = () => {

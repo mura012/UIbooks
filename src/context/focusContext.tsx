@@ -1,4 +1,4 @@
-import { useState, Context, createContext, ReactNode } from "react";
+import { useState, Context, createContext, ReactNode, useContext } from "react";
 
 export const FocusContext: Context<any> = createContext(false);
 export const SetContext: Context<any> = createContext(false);
@@ -13,3 +13,5 @@ export const FocusProvider = ({ children }: Props) => {
     </SetContext.Provider>
   );
 };
+
+export const useFocus = () => useContext(FocusContext);
