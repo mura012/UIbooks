@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <Center title="ログインページ">
-      <form className="w-80 bg-gray-50 p-5 shadow-md">
+      <form className="relative w-80 bg-gray-50 p-5 pb-20 shadow-md">
         <label>
           <p>メールアドレス</p>
           <Input
@@ -63,11 +63,14 @@ const Login = () => {
             </Button>
           </div>
         </label>
-        <SpeechBubble title="タイトル" text="body" position="bottom">
-          <Button style={{ marginTop: "20px" }} onClick={handleLogin}>
-            ログイン
-          </Button>
-        </SpeechBubble>
+
+        <Button
+          style={{ marginTop: "20px" }}
+          onClick={handleLogin}
+          className="absolute right-6"
+        >
+          ログイン
+        </Button>
       </form>
       <BackButton href="/" />
     </Center>
