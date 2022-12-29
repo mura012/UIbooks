@@ -3,7 +3,6 @@ import { Center } from "src/Layouts/Center";
 import { IconEye, IconEyeOff } from "@tabler/icons";
 import { Button, Input } from "@mantine/core";
 import { useRef } from "react";
-import { ClickEvent } from "src/types/event";
 import { BackButton } from "src/components/BackButton";
 import { SpeechBubble } from "src/Layouts/SpeechBubble";
 import { useToggle } from "src/Fooks/useToggle";
@@ -34,13 +33,19 @@ const Login = () => {
     <Center title="ログインページ">
       <form className="relative w-80 bg-gray-50 p-5 pb-20 shadow-md">
         <label>
-          <p>メールアドレス</p>
-          <Input
-            type="email"
-            autoComplete="off"
-            ref={ref}
-            placeholder="sample@gmail.com"
-          />
+          <SpeechBubble
+            title="プレースホルダー"
+            text="実際の内容を後から挿入するために、とりあえず仮に確保した場所のこと。また、そのことを示す標識などのこと。"
+            position="bottom"
+          >
+            <p>メールアドレス</p>
+            <Input
+              type="email"
+              autoComplete="off"
+              ref={ref}
+              placeholder="sample@gmail.com"
+            />
+          </SpeechBubble>
           <p className="text-red-500">{errorText}</p>
         </label>
         <label>
